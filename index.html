@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS6_68081523 Phunaree Phiromrattanapreecha</title>
+    <style>
+        html { scroll-behavior: smooth; }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #fcf8f2;
+            color: #333;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #d35400;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li { margin-left: 20px; }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover { color: #d35400; }
+
+        .hero {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                        url('pic/癒しのお届け便 📦【動物】 (@Bakutan_bot1) on X.jpg') center/cover;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        section { padding: 80px 10%; text-align: center; }
+
+        h2 { margin-bottom: 30px; font-size: 2rem; color: #d35400; }
+
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .cat-card {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .cat-card:hover { transform: translateY(-5px); }
+
+        .cat-img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            object-fit: cover;
+            display: block;
+        }
+
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #d35400;
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            font-size: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Cat Cafe</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cats">Our Cats</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Welcome to Cat Cafe!</h1>
+        <p>A perfect place for cat lovers</p>
+    </section>
+
+    <section id="cats">
+        <h2>Our Cats</h2>
+        <div class="cat-grid">
+            <div class="cat-card">
+                <img src="pic/ぼくわちくわ_ 画像.jpg" alt="SomSom" class="cat-img">
+                <h3>SomSom</h3>
+            </div>
+            <div class="cat-card">
+                <img src="pic/download (1).jpg" alt="TaoTao" class="cat-img">
+                <h3>TaoTao</h3>
+            </div>
+            <div class="cat-card">
+                <img src="pic/Cat funny.jpg" alt="NaNa" class="cat-img">
+                <h3>NaNa</h3>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; Cat Cafe. All rights reserved.</p>
+        <p>Location: 123 Village, Bangkok | Tel: 000-000-0000</p>
+    </footer>
+
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <script>
+        const topBtn = document.getElementById("backToTop");
+
+        window.onscroll = function() {
+            topBtn.style.display = (window.scrollY > 300) ? "block" : "none";
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
